@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interstate 7</title>
+<meta name="description" content="Interstate 7 started in 1996 and it's back on the road. Cartoon character shirts and a cartoon about a highway nobody should drive at night are coming soon.">
+<meta property="og:title" content="Interstate 7">
+<meta property="og:description" content="Interstate 7 started in 1996 and it's back on the road. Coming soon.">
+<meta property="og:image" content="https://interstate7.com/img/01_carl_early.jpg">
+<link rel="icon" href="img/shield.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Overpass:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asphalt:#0e0e10; --asphalt2:#17171b; --line:#f2c230; --red:#d62828; --blue:#1d4fa8;
+  --bone:#f1eadb; --muted:#a7a396; --white:#fff;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--asphalt); color:var(--bone);
+  font-family:Overpass,system-ui,-apple-system,"Segoe UI",sans-serif; font-size:17px; line-height:1.6;
+  background-image:
+    radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    radial-gradient(rgba(0,0,0,.5) 1px,transparent 1px);
+  background-size:5px 5px,7px 7px;
+}
+a{color:var(--line)}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+/* center line running down the page */
+.road{position:relative}
+.road::before{
+  content:"";position:absolute;left:50%;top:0;bottom:0;width:10px;transform:translateX(-50%);
+  background:repeating-linear-gradient(to bottom,var(--line) 0 60px,transparent 60px 120px);
+  opacity:.12;pointer-events:none;z-index:0;
+}
+section{position:relative;z-index:1}
+.hero{text-align:center;padding-block:56px 40px}
+.hero img.shield{width:min(420px,78vw);height:auto;filter:drop-shadow(0 0 40px rgba(214,40,40,.35))}
+.tag{font-family:Bungee,Impact,sans-serif;font-size:clamp(28px,5.5vw,54px);line-height:1.05;margin:24px 0 10px;color:var(--white);text-wrap:balance}
+.sub{max-width:34ch;margin:0 auto;color:var(--muted);font-size:clamp(17px,2.2vw,20px)}
+.badge{display:inline-block;margin-top:26px;font-family:Bungee,Impact,sans-serif;letter-spacing:.06em;
+  background:var(--line);color:#111;padding:10px 18px 8px;border:3px solid #111;box-shadow:5px 5px 0 var(--red);transform:rotate(-2deg)}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px}
+.story img{width:100%;height:auto;border-radius:6px}
+h2{font-family:Bungee,Impact,sans-serif;font-weight:400;font-size:clamp(24px,3.6vw,36px);line-height:1.1;margin:0 0 14px;color:var(--white);text-wrap:balance}
+.kicker{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--line);margin-bottom:6px}
+.story p{margin:0 0 14px;max-width:60ch}
+.quote{font-family:Bungee,Impact,sans-serif;color:var(--red);font-size:20px;margin-top:20px}
+.run{padding-block:56px 72px}
+.run header{text-align:center;margin-bottom:28px}
+.run header p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:18px}
+.card{background:var(--asphalt2);border:2px solid #26262c;border-radius:8px;overflow:hidden;cursor:zoom-in;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-4px);border-color:var(--line)}
+.card img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;background:#000}
+.card b{display:block;padding:10px 14px 12px;font-weight:800;font-size:15px;letter-spacing:.02em}
+.mile{display:flex;justify-content:center;padding-block:10px 40px}
+.marker{background:#126b3a;color:#fff;border:3px solid #fff;border-radius:8px;padding:10px 18px 8px;text-align:center;font-weight:800;line-height:1.1;box-shadow:0 0 0 3px #126b3a}
+.marker span{display:block;font-family:Bungee,Impact,sans-serif;font-size:34px}
+footer{border-top:1px solid #222;color:var(--muted);font-size:14px;padding-block:24px 40px;text-align:center;position:relative;z-index:1}
+/* pop up viewer */
+.pop{position:fixed;inset:0;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;padding:20px;z-index:10}
+.pop img{max-width:min(92vw,760px);max-height:86vh;width:auto;height:auto;border-radius:6px}
+.pop[hidden]{display:none}
+@media (max-width:760px){
+  .story{grid-template-columns:minmax(0,1fr);gap:24px;padding-block:40px}
+  .hero{padding-block:40px 28px}
+}
+</style>
+</head>
+<body>
+<main class="road">
+  <section class="hero wrap">
+    <img class="shield" src="img/shield.png" alt="Interstate 7 highway shield" width="420" height="435">
+    <div class="tag">We started in 1996.<br>We're back on the road.</div>
+    <p class="sub">We put cartoon characters on shirts, and we're making a cartoon about a highway nobody should drive at night.</p>
+    <div class="badge">COMING SOON</div>
+  </section>
+
+  <section class="story wrap">
+    <img src="img/01_carl_early.jpg" alt="Carl, the grinning reaper in a red hoodie, sitting on a Mile 7 marker" loading="lazy" width="900" height="1000">
+    <div>
+      <div class="kicker">Mile 0</div>
+      <h2>A 17 year old started it to prove a point.</h2>
+      <p>In 1996 the local kids kept getting sponsored by companies we thought were lame. So we made our own. Interstate 7 put cartoon characters on the front of shirts and hats and sponsored our friends ourselves.</p>
+      <p>Carl was there from the start. He is a reaper in a red hoodie who never hurts anybody and always shows up a little too happy. He and his crew got drawn and redrawn until about 2004, and then the road went quiet for twenty years.</p>
+      <p>It just opened back up.</p>
+      <div class="quote">Carl doesn't take lives. He just shows up early.</div>
+    </div>
+  </section>
+
+  <div class="mile"><div class="marker">INTERSTATE<span>7</span>MILE MARKER</div></div>
+
+  <section class="run wrap">
+    <header>
+      <div class="kicker">The first run</div>
+      <h2>New from the road</h2>
+      <p>These aren't for sale yet. Tap one to get a closer look.</p>
+    </header>
+    <div class="grid">
+      <div class="card" data-img="img/01_carl_early.jpg"><img src="img/01_carl_early.jpg" alt="Carl on a Mile 7 marker checking a watch with no hands" loading="lazy"><b>Carl: Early</b></div>
+      <div class="card" data-img="img/02_chadwick_welcome.jpg"><img src="img/02_chadwick_welcome.jpg" alt="Chadwick holding a welcome basket" loading="lazy"><b>Chadwick: Welcome Neighbor</b></div>
+      <div class="card" data-img="img/03_twins_one_brain.jpg"><img src="img/03_twins_one_brain.jpg" alt="Dulla and Pons sharing one brain" loading="lazy"><b>Dulla and Pons: One Brain</b></div>
+      <div class="card" data-img="img/04_niko_stillness.jpg"><img src="img/04_niko_stillness.jpg" alt="Niko meditating while a truck splits around him" loading="lazy"><b>Niko: Stillness</b></div>
+      <div class="card" data-img="img/05_golem_roadwork.jpg"><img src="img/05_golem_roadwork.jpg" alt="The stone golem asleep under traffic cones" loading="lazy"><b>Golem: Road Work Ahead</b></div>
+    </div>
+  </section>
+</main>
+<footer class="wrap">© 1996, 2026 Interstate 7. Keep driving.</footer>
+
+<div class="pop" id="pop" hidden><img alt=""></div>
+<script>
+const pop=document.getElementById('pop'), pimg=pop.querySelector('img');
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>{pimg.src=c.dataset.img;pimg.alt=c.querySelector('img').alt;pop.hidden=false;}));
+pop.addEventListener('click',()=>{pop.hidden=true;});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')pop.hidden=true;});
+</script>
+</body>
+</html>

@@ -1,2 +1,3 @@
-# interstate7-site
-interstate7.com
+# Interstate 7
+
+The site for interstate7.com, hosted free on GitHub Pages.
